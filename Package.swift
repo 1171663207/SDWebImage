@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SDWebImageDynamic",
+    name: "SDWebImage_Dynamic",
     platforms: [
         .macOS(.v10_11),
         .iOS(.v9),
@@ -14,13 +14,13 @@ let package = Package(
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "SDWebImageDynamic",
+            name: "SDWebImage_Dynamic",
             type: .dynamic,
-            targets: ["SDWebImageDynamic"]),
+            targets: ["SDWebImage_Dynamic"]),
         .library(
-            name: "SDWebImageMapKitDynamic",
+            name: "SDWebImageMapKit_Dynamic",
             type: .dynamic,
-            targets: ["SDWebImageMapKitDynamic"])
+            targets: ["SDWebImageMapKit_Dynamic"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -30,7 +30,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "SDWebImageDynamic",
+            name: "SDWebImage_Dynamic",
             dependencies: [],
             path: "SDWebImage",
             sources: ["Core", "Private"],
@@ -41,8 +41,8 @@ let package = Package(
             ]
         ),
         .target(
-            name: "SDWebImageMapKitDynamic",
-            dependencies: ["SDWebImageDynamic"],
+            name: "SDWebImageMapKit_Dynamic",
+            dependencies: ["SDWebImage_Dynamic"],
             path: "SDWebImageMapKit",
             sources: ["MapKit"],
             resources: [.copy("Resources/PrivacyInfo.xcprivacy")]
