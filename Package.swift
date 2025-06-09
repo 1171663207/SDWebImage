@@ -16,11 +16,11 @@ let package = Package(
         .library(
             name: "SDWebImageDynamic",
             type: .dynamic,
-            targets: ["SDWebImage"]),
+            targets: ["SDWebImageDynamic"]),
         .library(
             name: "SDWebImageMapKitDynamic",
             type: .dynamic,
-            targets: ["SDWebImageMapKit"])
+            targets: ["SDWebImageMapKitDynamic"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -30,7 +30,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "SDWebImage",
+            name: "SDWebImageDynamic",
             dependencies: [],
             path: "SDWebImage",
             sources: ["Core", "Private"],
@@ -41,7 +41,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "SDWebImageMapKit",
+            name: "SDWebImageMapKitDynamic",
             dependencies: ["SDWebImage"],
             path: "SDWebImageMapKit",
             sources: ["MapKit"],
