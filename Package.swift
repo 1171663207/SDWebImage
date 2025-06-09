@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SDWebImage_Dynamic",
+    name: "SDWebImageDynamic",
     platforms: [
         .macOS(.v10_11),
         .iOS(.v9),
@@ -14,11 +14,11 @@ let package = Package(
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "SDWebImage",
+            name: "SDWebImageDynamic",
             type: .dynamic,
             targets: ["SDWebImage"]),
         .library(
-            name: "SDWebImageMapKit",
+            name: "SDWebImageMapKitDynamic",
             type: .dynamic,
             targets: ["SDWebImageMapKit"])
     ],
