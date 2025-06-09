@@ -42,7 +42,7 @@ let package = Package(
         ),
         .target(
             name: "SDWebImageMapKitDynamic",
-            dependencies: ["SDWebImage"],
+            dependencies: ["SDWebImageDynamic"],
             path: "SDWebImageMapKit",
             sources: ["MapKit"],
             resources: [.copy("Resources/PrivacyInfo.xcprivacy")]
